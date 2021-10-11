@@ -301,6 +301,23 @@ public class CreateJPanel extends javax.swing.JPanel {
     
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
+        
+        try{ 
+            ArrayList<Integer> unqname = new ArrayList<>();
+            for(CarDetails ncar: carDetailsHistory.getCarDetailsHistory()){ 
+                if(!(unqname.contains(ncar.getSerialNumber()))){ 
+                    unqname.add(ncar.getSerialNumber()); 
+                } 
+            }
+
+            if(unqname.contains(Integer.parseInt(txtSerialNumber.getText()))) {
+                
+                JOptionPane.showMessageDialog(this, "Enter unique serial number ");
+            }
+         } catch(Exception e){ 
+             System.out.println("Error in serial no check " +e); 
+         }
+        
             String carManufacturer = jComboCarManufacturer.getSelectedItem().toString();
             String carModelName = txtCarModelName.getText();
             String carModelNum = txtCarModelNum.getText();
@@ -317,6 +334,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         
         String carModelNumPattern = "^[a-zA-Z0-9]+";
         Pattern expCarModelNum = Pattern.compile(carModelNumPattern);
+        
         
         
         if(txtCarModelName.getText().isEmpty()|| txtCarModelNum.getText().isEmpty() || txtSerialNumber.getText().isEmpty() ){
