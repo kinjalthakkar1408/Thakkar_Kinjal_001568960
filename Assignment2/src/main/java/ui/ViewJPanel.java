@@ -8,6 +8,7 @@ package ui;
 import java.awt.CardLayout;
 import java.awt.event.KeyEvent;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.function.ObjDoubleConsumer;
 import java.util.regex.Matcher;
@@ -493,6 +494,21 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     private void btnSaveUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveUpdateActionPerformed
         // TODO add your handling code here:
+        try{ 
+            ArrayList<Integer> unqname = new ArrayList<>();
+            for(CarDetails ncar: carDetailsHistory.getCarDetailsHistory()){ 
+                if(!(unqname.contains(ncar.getSerialNumber()))){ 
+                    unqname.add(ncar.getSerialNumber()); 
+                } 
+            }
+
+            if(unqname.contains(Integer.parseInt(txtSerialNumber.getText()))) {
+                
+                JOptionPane.showMessageDialog(this, "Enter unique serial number ");
+            }
+         } catch(Exception e){ 
+             System.out.println("Error in serial no check " +e); 
+         }
         
         int selectedRowIndex = tblCarDetails.getSelectedRow();
          if(selectedRowIndex  < 0) {
