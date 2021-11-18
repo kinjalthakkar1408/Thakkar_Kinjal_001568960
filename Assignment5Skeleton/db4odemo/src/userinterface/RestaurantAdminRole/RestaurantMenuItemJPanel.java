@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Charmi Dalal
+ * @author kinjal
  */
 public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
 
@@ -59,7 +59,7 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
         lblIngrediants = new javax.swing.JLabel();
         lblItemPrice = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 204));
 
         lblUpdateMenuItem.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblUpdateMenuItem.setText("Update Menu Item");

@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Charmi Dalal
+ * @author kinjal
  */
 public class ResturantInfoJPanel extends javax.swing.JPanel {
 
@@ -77,7 +77,7 @@ public class ResturantInfoJPanel extends javax.swing.JPanel {
         lblPhoneNo1 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 204));
 
         lblResInfo.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblResInfo.setText("Restaurant Info");

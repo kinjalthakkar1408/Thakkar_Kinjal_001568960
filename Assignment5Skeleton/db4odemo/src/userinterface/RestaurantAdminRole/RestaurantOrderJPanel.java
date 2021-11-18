@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Charmi Dalal
+ * @author kinjal
  */
 public class RestaurantOrderJPanel extends javax.swing.JPanel {
 
@@ -110,7 +110,7 @@ public class RestaurantOrderJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 204));
 
         lblOrderList.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblOrderList.setText("Order List");

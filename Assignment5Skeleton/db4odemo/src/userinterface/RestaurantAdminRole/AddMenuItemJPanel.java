@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Charmi Dalal
+ * @author kinjal
  */
 public class AddMenuItemJPanel extends javax.swing.JPanel {
 
@@ -55,7 +55,7 @@ public class AddMenuItemJPanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 204));
 
         lblAddItem.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblAddItem.setText("Add Item");
