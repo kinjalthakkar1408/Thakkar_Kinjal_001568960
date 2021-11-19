@@ -103,7 +103,7 @@
                   <Component id="lblStreetAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtZipcode" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="33" max="32767" attributes="0"/>
+              <EmptySpace pref="268" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblPhoneNo1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>

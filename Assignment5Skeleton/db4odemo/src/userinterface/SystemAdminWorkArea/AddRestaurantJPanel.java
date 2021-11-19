@@ -66,15 +66,33 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         txtEmail = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 204, 204));
+        setLayout(null);
 
         lblAddRes.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblAddRes.setText(" Create Restaurant");
+        add(lblAddRes);
+        lblAddRes.setBounds(305, 45, 176, 24);
 
+        lblResName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblResName.setText("Restaurant Name:");
+        add(lblResName);
+        lblResName.setBounds(175, 123, 87, 26);
 
+        lblStreetAdd.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblStreetAdd.setText("Street Address:");
+        add(lblStreetAdd);
+        lblStreetAdd.setBounds(175, 160, 87, 22);
 
+        lblPhoneNo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPhoneNo.setText("Phone no:");
+        add(lblPhoneNo);
+        lblPhoneNo.setBounds(175, 320, 87, 22);
+        add(txtResName);
+        txtResName.setBounds(295, 124, 262, 26);
+        add(txtStreetAddress);
+        txtStreetAddress.setBounds(295, 160, 262, 27);
+        add(txtPhoneNo);
+        txtPhoneNo.setBounds(295, 312, 262, 30);
 
         btnSave.setText("Create Restaurant");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -82,6 +100,8 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
                 btnSaveActionPerformed(evt);
             }
         });
+        add(btnSave);
+        btnSave.setBounds(370, 470, 130, 29);
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -89,106 +109,49 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack);
+        btnBack.setBounds(22, 577, 53, 21);
 
+        lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUsername.setText("Username:");
+        add(lblUsername);
+        lblUsername.setBounds(180, 360, 87, 23);
 
+        lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPassword.setText("Password:");
+        add(lblPassword);
+        lblPassword.setBounds(180, 400, 87, 28);
+        add(txtUsername);
+        txtUsername.setBounds(295, 352, 262, 30);
 
+        lblManagerName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblManagerName.setText("Manager Name:");
+        add(lblManagerName);
+        lblManagerName.setBounds(175, 243, 87, 23);
+        add(txtManagerName);
+        txtManagerName.setBounds(295, 236, 262, 30);
 
+        txtPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPasswordActionPerformed(evt);
+            }
+        });
+        add(txtPassword);
+        txtPassword.setBounds(300, 400, 260, 28);
+
+        lblZipcode.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblZipcode.setText("Zipcode:");
+        add(lblZipcode);
+        lblZipcode.setBounds(175, 200, 87, 25);
+        add(txtZipcode);
+        txtZipcode.setBounds(295, 200, 262, 25);
 
+        lblPhoneNo1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPhoneNo1.setText("Email:");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPhoneNo1)
-                            .addComponent(lblPassword)
-                            .addComponent(lblZipcode)
-                            .addComponent(lblManagerName))
-                        .addGap(29, 29, 29))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(lblResName)
-                                    .addGap(33, 33, 33)
-                                    .addComponent(txtResName, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblStreetAdd)
-                                        .addComponent(lblUsername)
-                                        .addComponent(lblPhoneNo))
-                                    .addGap(49, 49, 49)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtPhoneNo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 269, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtManagerName, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(320, 320, 320)
-                .addComponent(lblAddRes)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addGap(118, 118, 118)
-                .addComponent(btnSave)
-                .addGap(286, 286, 286))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(lblAddRes)
-                .addGap(18, 83, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtManagerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblManagerName)
-                    .addComponent(txtResName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblResName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblPassword)
-                            .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUsername)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblPhoneNo1)
-                            .addComponent(txtPhoneNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblPhoneNo)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtZipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblZipcode)
-                            .addComponent(txtStreetAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblStreetAdd))))
-                .addGap(85, 85, 85)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSave)
-                    .addComponent(btnBack))
-                .addGap(86, 86, 86))
-        );
+        add(lblPhoneNo1);
+        lblPhoneNo1.setBounds(175, 282, 87, 13);
+        add(txtEmail);
+        txtEmail.setBounds(295, 276, 262, 26);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
@@ -250,6 +213,10 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) container.getLayout();
         layout.previous(container);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPasswordActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
