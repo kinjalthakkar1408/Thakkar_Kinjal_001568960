@@ -124,11 +124,11 @@ public class RestaurantMenuJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(backBtn)
-                                .addGap(116, 116, 116)
-                                .addComponent(btnAddItem)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnAddItem)
+                                .addGap(18, 18, 18)
                                 .addComponent(btnEditItem)
-                                .addGap(112, 112, 112)
+                                .addGap(18, 18, 18)
                                 .addComponent(btnDeleteItem))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
@@ -149,7 +149,7 @@ public class RestaurantMenuJPanel extends javax.swing.JPanel {
                     .addComponent(btnAddItem)
                     .addComponent(btnEditItem)
                     .addComponent(btnDeleteItem))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(326, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

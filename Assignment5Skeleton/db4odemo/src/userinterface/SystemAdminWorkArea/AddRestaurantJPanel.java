@@ -13,6 +13,9 @@ import Business.Role.AdminRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.event.KeyEvent;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -64,6 +67,11 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         txtZipcode = new javax.swing.JTextField();
         lblPhoneNo1 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
+        lblRestroNameError = new javax.swing.JLabel();
+        lblZipcodeError = new javax.swing.JLabel();
+        lblManagerNameError = new javax.swing.JLabel();
+        lblEmailError = new javax.swing.JLabel();
+        lblPhoneNumberError = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 204));
         setLayout(null);
@@ -87,10 +95,22 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         lblPhoneNo.setText("Phone no:");
         add(lblPhoneNo);
         lblPhoneNo.setBounds(175, 320, 87, 22);
+
+        txtResName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtResNameKeyPressed(evt);
+            }
+        });
         add(txtResName);
         txtResName.setBounds(295, 124, 262, 26);
         add(txtStreetAddress);
         txtStreetAddress.setBounds(295, 160, 262, 27);
+
+        txtPhoneNo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPhoneNoKeyPressed(evt);
+            }
+        });
         add(txtPhoneNo);
         txtPhoneNo.setBounds(295, 312, 262, 30);
 
@@ -110,7 +130,7 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack);
-        btnBack.setBounds(22, 577, 53, 21);
+        btnBack.setBounds(22, 577, 80, 30);
 
         lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUsername.setText("Username:");
@@ -128,6 +148,12 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         lblManagerName.setText("Manager Name:");
         add(lblManagerName);
         lblManagerName.setBounds(175, 243, 87, 23);
+
+        txtManagerName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtManagerNameKeyPressed(evt);
+            }
+        });
         add(txtManagerName);
         txtManagerName.setBounds(295, 236, 262, 30);
 
@@ -137,12 +163,18 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
             }
         });
         add(txtPassword);
-        txtPassword.setBounds(300, 400, 260, 28);
+        txtPassword.setBounds(290, 400, 270, 28);
 
         lblZipcode.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblZipcode.setText("Zipcode:");
         add(lblZipcode);
         lblZipcode.setBounds(175, 200, 87, 25);
+
+        txtZipcode.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtZipcodeKeyPressed(evt);
+            }
+        });
         add(txtZipcode);
         txtZipcode.setBounds(295, 200, 262, 25);
 
@@ -150,8 +182,24 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         lblPhoneNo1.setText("Email:");
         add(lblPhoneNo1);
         lblPhoneNo1.setBounds(175, 282, 87, 13);
+
+        txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtEmailKeyPressed(evt);
+            }
+        });
         add(txtEmail);
         txtEmail.setBounds(295, 276, 262, 26);
+        add(lblRestroNameError);
+        lblRestroNameError.setBounds(590, 127, 220, 20);
+        add(lblZipcodeError);
+        lblZipcodeError.setBounds(600, 203, 210, 20);
+        add(lblManagerNameError);
+        lblManagerNameError.setBounds(590, 240, 220, 20);
+        add(lblEmailError);
+        lblEmailError.setBounds(600, 280, 200, 20);
+        add(lblPhoneNumberError);
+        lblPhoneNumberError.setBounds(600, 320, 210, 20);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
@@ -169,9 +217,15 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please Enter All Fields!");
         } else if (!system.checkValidPhoneFormat(phone)) {
             JOptionPane.showMessageDialog(null, "Please Enter Valid Phone No.");
-        }else if (!system.checkValidEmailFormat(email)) {
+        } else if (!system.checkValidNameFormat(name)) {
+            JOptionPane.showMessageDialog(null, "Please Enter Valid Name");
+        } else if (!system.checkValidNameFormat(managerName)) {
+            JOptionPane.showMessageDialog(null, "Please Enter Valid Manager Name");
+        } else if (!system.checkValidZipcodeFormat(zipcode)) {
+            JOptionPane.showMessageDialog(null, "Zipcode format incorrect! Zipcode should be 5 digits");
+        } else if (!system.checkValidEmailFormat(email)) {
             JOptionPane.showMessageDialog(null, "Email format incorrect!");
-        }  else if (!system.getUserAccountDirectory().checkIfUsernameIsUnique(username)) {
+        } else if (!system.getUserAccountDirectory().checkIfUsernameIsUnique(username)) {
             JOptionPane.showMessageDialog(null, "Username Already Exists!");
         } else if (!restaurantDirectory.isPhoneUnique(phone)) {
             JOptionPane.showMessageDialog(null, "Phone no Already Registered!");
@@ -218,18 +272,125 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPasswordActionPerformed
 
+    private void txtResNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtResNameKeyPressed
+        // TODO add your handling code here:
+        char c =evt.getKeyChar();
+           
+           if(Character.isLetter(c) || Character.isWhitespace(c)|| Character.isISOControl(c)){
+               lblRestroNameError.setText(" ");
+               txtResName.setEditable(true);
+               
+           }else {
+               if(!Character.isLetter(c)){
+              // txtName.setEditable(false);
+                lblRestroNameError.setText("Enter a restaurant valid name");
+               }
+           }
+        
+    }//GEN-LAST:event_txtResNameKeyPressed
+
+    private void txtEmailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyPressed
+        // TODO add your handling code here:
+        
+        String emailRegex = "^[a-zA-Z0-9]+@[a-zA-Z]+\\.[a-zA-Z]+";
+        Pattern ep = Pattern.compile(emailRegex);
+        Matcher matcher = ep.matcher(txtEmail.getText());
+        if(!matcher.matches())
+        {
+        lblEmailError.setText("Email ID is not valid");
+        }
+        else
+        {
+            lblEmailError.setText(null);
+        }
+    }//GEN-LAST:event_txtEmailKeyPressed
+
+    private void txtPhoneNoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPhoneNoKeyPressed
+        // TODO add your handling code here:
+        
+        String phoneNo = txtPhoneNo.getText();
+        int length = phoneNo.length();
+        
+        char c = evt.getKeyChar();
+        
+        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'){
+            if(length<10){
+                txtPhoneNo.setEditable(true);
+                lblPhoneNumberError.setText("Phone Number should be 10 digits!!");
+            }else{
+                txtPhoneNo.setEditable(false);
+                lblPhoneNumberError.setText(" ");
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                txtPhoneNo.setEditable(true);
+               
+            }else{
+                txtPhoneNo.setEditable(false);  
+            }
+        }
+    }//GEN-LAST:event_txtPhoneNoKeyPressed
+
+    private void txtZipcodeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtZipcodeKeyPressed
+        // TODO add your handling code here:
+        
+        String zipcode = txtZipcode.getText();
+        int length = zipcode.length();
+        
+        char c = evt.getKeyChar();
+        
+        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'){
+            if(length<5){
+                txtZipcode.setEditable(true);
+                lblZipcodeError.setText("zipcode Number should be 5 digits!!");
+            }else{
+                txtZipcode.setEditable(false);
+                lblZipcodeError.setText(" ");
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                txtZipcode.setEditable(true);
+               
+            }else{
+                txtZipcode.setEditable(false);  
+            }
+        }
+    }//GEN-LAST:event_txtZipcodeKeyPressed
+
+    private void txtManagerNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtManagerNameKeyPressed
+        // TODO add your handling code here:
+        
+        char c =evt.getKeyChar();
+           
+           if(Character.isLetter(c) || Character.isWhitespace(c)|| Character.isISOControl(c)){
+               lblManagerNameError.setText(" ");
+               txtManagerName.setEditable(true);
+               
+           }else {
+               if(!Character.isLetter(c)){
+              // txtName.setEditable(false);
+                lblManagerNameError.setText("Enter a restaurant valid name");
+               }
+           }
+    }//GEN-LAST:event_txtManagerNameKeyPressed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSave;
     private javax.swing.JLabel lblAddRes;
+    private javax.swing.JLabel lblEmailError;
     private javax.swing.JLabel lblManagerName;
+    private javax.swing.JLabel lblManagerNameError;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblPhoneNo;
     private javax.swing.JLabel lblPhoneNo1;
+    private javax.swing.JLabel lblPhoneNumberError;
     private javax.swing.JLabel lblResName;
+    private javax.swing.JLabel lblRestroNameError;
     private javax.swing.JLabel lblStreetAdd;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel lblZipcode;
+    private javax.swing.JLabel lblZipcodeError;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtManagerName;
     private javax.swing.JPasswordField txtPassword;

@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author Charmi Dalal
+ * @author kinjal
  */
 public class EcoSystem extends Organization {
 
@@ -90,6 +90,18 @@ public class EcoSystem extends Organization {
         }
         return business;
     }
+    
+    public Boolean checkValidNameFormat(String name)
+    {
+        String regex = "^[a-zA-Z]+";
+        Pattern pattern = Pattern.compile(regex);
+
+        Matcher matcher = pattern.matcher(name);
+        if (matcher.matches()) {
+            return true;
+        }
+        return false;
+    }
     public Boolean checkValidPhoneFormat(String phoneNo)
     {
         String regex = "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$";
@@ -103,10 +115,22 @@ public class EcoSystem extends Organization {
     }
     public Boolean checkValidEmailFormat(String email)
     {
-        String regex = "^(.+)@(.+)$";
+        String regex = "^[a-zA-Z0-9]+@[a-zA-Z]+\\.[a-zA-Z]+";
         Pattern pattern = Pattern.compile(regex);
 
         Matcher matcher = pattern.matcher(email);
+        if (matcher.matches()) {
+            return true;
+        }
+        return false;
+    }
+    
+      public Boolean checkValidZipcodeFormat(String zipcode)
+    {
+        String regex = "^[0-9]{5}+";
+        Pattern pattern = Pattern.compile(regex);
+
+        Matcher matcher = pattern.matcher(zipcode);
         if (matcher.matches()) {
             return true;
         }
