@@ -13,6 +13,7 @@ import Business.Role.DeliverManRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -57,6 +58,7 @@ public class AddDeliveryManJPanel extends javax.swing.JPanel {
         txtPassword = new javax.swing.JPasswordField();
         lblContactNo1 = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
+        lblPhoneNoError = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 204));
 
@@ -70,6 +72,12 @@ public class AddDeliveryManJPanel extends javax.swing.JPanel {
         lblDeliveryName.setText("Full Name:");
 
         lblContactNo.setText("Contact No:");
+
+        txtContactNo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtContactNoKeyPressed(evt);
+            }
+        });
 
         btnCreate.setText("Create Delivery Man");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +115,9 @@ public class AddDeliveryManJPanel extends javax.swing.JPanel {
                             .addComponent(txtDeliveryName)
                             .addComponent(txtContactNo)
                             .addComponent(txtEmail)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtPassword, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34)
+                        .addComponent(lblPhoneNoError, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(86, 86, 86)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,7 +132,7 @@ public class AddDeliveryManJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(201, 201, 201)
                         .addComponent(lblCreateDeliveryMan)))
-                .addContainerGap(387, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,7 +146,8 @@ public class AddDeliveryManJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtContactNo, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblContactNo))
+                    .addComponent(lblContactNo)
+                    .addComponent(lblPhoneNoError, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -179,6 +190,8 @@ public class AddDeliveryManJPanel extends javax.swing.JPanel {
         } 
         else if(!deliveryManDirectory.isPhoneUnique(phone)){
             JOptionPane.showMessageDialog(null, "Sorry! Delivery man with this phone already exists!");
+        }else if (!system.checkValidNameFormat(name)) {
+            JOptionPane.showMessageDialog(null, "Name format incorrect!");
         }
         else if(!deliveryManDirectory.isEmailUnique(email)){
             JOptionPane.showMessageDialog(null, "Sorry! Delivery man with this email already exists!");
@@ -210,7 +223,7 @@ public class AddDeliveryManJPanel extends javax.swing.JPanel {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         container.remove(this);
-         Component[] componentArray = container.getComponents();
+        Component[] componentArray = container.getComponents();
         Component component = componentArray[componentArray.length - 1];
         UpdateDeliveryManJPanel manageDeliveryJPanel = (UpdateDeliveryManJPanel) component;
         manageDeliveryJPanel.populateDeliveryManList();
@@ -218,6 +231,33 @@ public class AddDeliveryManJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) container.getLayout();
         layout.previous(container);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtContactNoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtContactNoKeyPressed
+        // TODO add your handling code here:
+        
+        String phoneNo = txtContactNo.getText();
+        int length = phoneNo.length();
+        
+        char c = evt.getKeyChar();
+        
+        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'){
+            if(length<10){
+                txtContactNo.setEditable(true);
+                lblPhoneNoError.setText("Phone Number should be 10 digits!!");
+            }else{
+                txtContactNo.setEditable(false);
+                lblPhoneNoError.setText(" ");
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                txtContactNo.setEditable(true);
+               
+            }else{
+                txtContactNo.setEditable(false);  
+            }
+        }
+        
+    }//GEN-LAST:event_txtContactNoKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -228,6 +268,7 @@ public class AddDeliveryManJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblCreateDeliveryMan;
     private javax.swing.JLabel lblDeliveryName;
     private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblPhoneNoError;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JTextField txtContactNo;
     private javax.swing.JTextField txtDeliveryName;

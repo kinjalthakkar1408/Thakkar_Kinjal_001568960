@@ -69,6 +69,7 @@ public class AddCustomerJPanel extends javax.swing.JPanel {
         lblEmailError = new javax.swing.JLabel();
         lblNameError = new javax.swing.JLabel();
         lblZipcodeError = new javax.swing.JLabel();
+        lblPhoneNumberError = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 204));
 
@@ -196,14 +197,16 @@ public class AddCustomerJPanel extends javax.swing.JPanel {
                                                 .addComponent(txtStreetAddress, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGap(28, 28, 28)
-                                                .addComponent(lblNameError, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                     .addComponent(lblEmailError, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
-                                                    .addComponent(lblZipcodeError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))))))
-                .addContainerGap(85, Short.MAX_VALUE))
+                                                    .addComponent(lblZipcodeError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(28, 28, 28)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(lblNameError, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(lblPhoneNumberError, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))))))))))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,7 +234,8 @@ public class AddCustomerJPanel extends javax.swing.JPanel {
                                 .addGap(23, 23, 23)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lblMobileNo)
-                                    .addComponent(txtMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblPhoneNumberError, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -401,7 +405,27 @@ public class AddCustomerJPanel extends javax.swing.JPanel {
 
     private void txtMobileNoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMobileNoKeyPressed
         // TODO add your handling code here:
+        String phoneNo = txtMobileNo.getText();
+        int length = phoneNo.length();
         
+        char c = evt.getKeyChar();
+        
+        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'){
+            if(length<10){
+                txtMobileNo.setEditable(true);
+                lblPhoneNumberError.setText("Phone Number should be 10 digits!!");
+            }else{
+                txtMobileNo.setEditable(false);
+                lblPhoneNumberError.setText(" ");
+            }
+        }else{
+            if(evt.getExtendedKeyCode()==KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode()==KeyEvent.VK_DELETE){
+                txtMobileNo.setEditable(true);
+               
+            }else{
+                txtMobileNo.setEditable(false);  
+            }
+        }
         
     }//GEN-LAST:event_txtMobileNoKeyPressed
 
@@ -415,6 +439,7 @@ public class AddCustomerJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblMobileNo;
     private javax.swing.JLabel lblNameError;
     private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblPhoneNumberError;
     private javax.swing.JLabel lblStreetAddress;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel lblUsername1;

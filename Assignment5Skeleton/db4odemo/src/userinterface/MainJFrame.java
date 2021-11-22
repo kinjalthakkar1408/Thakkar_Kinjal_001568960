@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -245,11 +246,17 @@ public class MainJFrame extends javax.swing.JFrame {
         txtUsername.setText("");
         txtPassword.setText("");
 
+        //cardLayoutJPanel.removeAll();
+        
         cardLayoutJPanel.removeAll();
-
+        JPanel blankJP = new JPanel();
+        cardLayoutJPanel.add("blank", blankJP);
         CardLayout crdLyt = (CardLayout) cardLayoutJPanel.getLayout();
         crdLyt.next(cardLayoutJPanel);
-        dB4OUtil.storeSystem(system);
+
+//        CardLayout crdLyt = (CardLayout) cardLayoutJPanel.getLayout();
+//        crdLyt.next(cardLayoutJPanel);
+//        dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed

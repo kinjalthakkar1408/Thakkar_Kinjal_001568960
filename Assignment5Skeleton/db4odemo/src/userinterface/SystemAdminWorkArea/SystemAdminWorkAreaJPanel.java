@@ -13,6 +13,7 @@ import Business.Order.OrderDirectory;
 import Business.Restaurant.RestaurantDirectory;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  *
@@ -40,6 +41,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.deliveryManDirectory = deliveryManDirectory;
         this.menuDirectory = menuDirectory;
         this.orderDirectory = orderDirectory;
+        populateTree();
     }
 
     /**
@@ -53,6 +55,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jSplitPane = new javax.swing.JSplitPane();
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTree = new javax.swing.JTree();
         jPanel1 = new javax.swing.JPanel();
         btnManageCustomers = new javax.swing.JButton();
         btnManageRestaurants = new javax.swing.JButton();
@@ -62,15 +66,27 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 204));
 
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("JTree");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Restaurant");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Customer");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Delivery");
+        treeNode1.add(treeNode2);
+        jTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(jTree);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1365, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 1181, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 739, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 739, Short.MAX_VALUE)
         );
 
         jSplitPane.setRightComponent(jPanel2);
@@ -143,6 +159,30 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageRestaurantsActionPerformed
 
+    public void populateTree() {
+        DefaultMutableTreeNode assets = new DefaultMutableTreeNode("roles");
+        DefaultMutableTreeNode restaurant = new DefaultMutableTreeNode("restaurants");
+        DefaultMutableTreeNode customers = new DefaultMutableTreeNode("customers");
+        DefaultMutableTreeNode deliverymen = new DefaultMutableTreeNode("deliverymen");
+        assets.add(restaurant);
+        assets.add(customers);
+        assets.add(deliverymen);
+        for (int i = 0; i < this.ecosystem.getRestaurantDirectory().getRestaurantDirectory().size(); i++) {
+            DefaultMutableTreeNode temp = new DefaultMutableTreeNode(this.ecosystem.getRestaurantDirectory().getRestaurantDirectory().get(i).getRestaurantName());
+            restaurant.add(temp);
+        }
+        for (int i = 0; i < this.ecosystem.getUserAccountDirectory().getUserAccountList().size(); i++) {
+            if (this.ecosystem.getUserAccountDirectory().getUserAccountList().get(i).getRole().toString() == "Business.Role.DeliverManRole") {
+                DefaultMutableTreeNode temp = new DefaultMutableTreeNode(this.ecosystem.getUserAccountDirectory().getUserAccountList().get(i).getUsername());
+                deliverymen.add(temp);
+            } else if (this.ecosystem.getUserAccountDirectory().getUserAccountList().get(i).getRole().toString() == "Business.Role.CustomerRole") {
+                DefaultMutableTreeNode temp = new DefaultMutableTreeNode(this.ecosystem.getUserAccountDirectory().getUserAccountList().get(i).getUsername());
+                customers.add(temp);
+            }
+        }
+        jTree.setModel(new javax.swing.tree.DefaultTreeModel(assets));
+}
+    
     private void btnManageCustomersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCustomersActionPerformed
         UpdateCustomersJPanel manageCustomersJPanel = new UpdateCustomersJPanel(userProcessContainer, ecosystem, customerDirectory);
         userProcessContainer.add("manageCustomersJPanel", manageCustomersJPanel);
@@ -157,6 +197,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageRestaurants;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane;
+    private javax.swing.JTree jTree;
     // End of variables declaration//GEN-END:variables
 }
