@@ -73,29 +73,36 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         lblEmailError = new javax.swing.JLabel();
         lblPhoneNumberError = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 102));
         setLayout(null);
 
+        lblAddRes.setBackground(new java.awt.Color(255, 153, 0));
         lblAddRes.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblAddRes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAddRes.setText(" Create Restaurant");
+        lblAddRes.setOpaque(true);
         add(lblAddRes);
-        lblAddRes.setBounds(305, 45, 176, 24);
+        lblAddRes.setBounds(171, 45, 390, 50);
 
+        lblResName.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblResName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblResName.setText("Restaurant Name:");
         add(lblResName);
         lblResName.setBounds(175, 123, 87, 26);
 
+        lblStreetAdd.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblStreetAdd.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblStreetAdd.setText("Street Address:");
         add(lblStreetAdd);
         lblStreetAdd.setBounds(175, 160, 87, 22);
 
+        lblPhoneNo.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblPhoneNo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPhoneNo.setText("Phone no:");
         add(lblPhoneNo);
         lblPhoneNo.setBounds(175, 320, 87, 22);
 
+        txtResName.setBackground(new java.awt.Color(255, 255, 204));
         txtResName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtResNameKeyPressed(evt);
@@ -103,9 +110,12 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         });
         add(txtResName);
         txtResName.setBounds(295, 124, 262, 26);
+
+        txtStreetAddress.setBackground(new java.awt.Color(255, 255, 204));
         add(txtStreetAddress);
         txtStreetAddress.setBounds(295, 160, 262, 27);
 
+        txtPhoneNo.setBackground(new java.awt.Color(255, 255, 204));
         txtPhoneNo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtPhoneNoKeyPressed(evt);
@@ -114,6 +124,8 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         add(txtPhoneNo);
         txtPhoneNo.setBounds(295, 312, 262, 30);
 
+        btnSave.setBackground(new java.awt.Color(255, 153, 0));
+        btnSave.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnSave.setText("Create Restaurant");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +135,8 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         add(btnSave);
         btnSave.setBounds(370, 470, 130, 29);
 
+        btnBack.setBackground(new java.awt.Color(255, 153, 0));
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,23 +146,29 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(22, 577, 80, 30);
 
+        lblUsername.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUsername.setText("Username:");
         add(lblUsername);
         lblUsername.setBounds(180, 360, 87, 23);
 
+        lblPassword.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPassword.setText("Password:");
         add(lblPassword);
         lblPassword.setBounds(180, 400, 87, 28);
+
+        txtUsername.setBackground(new java.awt.Color(255, 255, 204));
         add(txtUsername);
         txtUsername.setBounds(295, 352, 262, 30);
 
+        lblManagerName.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblManagerName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblManagerName.setText("Manager Name:");
         add(lblManagerName);
         lblManagerName.setBounds(175, 243, 87, 23);
 
+        txtManagerName.setBackground(new java.awt.Color(255, 255, 204));
         txtManagerName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtManagerNameKeyPressed(evt);
@@ -157,6 +177,7 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         add(txtManagerName);
         txtManagerName.setBounds(295, 236, 262, 30);
 
+        txtPassword.setBackground(new java.awt.Color(255, 255, 204));
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);
@@ -165,11 +186,13 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         add(txtPassword);
         txtPassword.setBounds(290, 400, 270, 28);
 
+        lblZipcode.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblZipcode.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblZipcode.setText("Zipcode:");
         add(lblZipcode);
         lblZipcode.setBounds(175, 200, 87, 25);
 
+        txtZipcode.setBackground(new java.awt.Color(255, 255, 204));
         txtZipcode.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtZipcodeKeyPressed(evt);
@@ -178,11 +201,13 @@ public class AddRestaurantJPanel extends javax.swing.JPanel {
         add(txtZipcode);
         txtZipcode.setBounds(295, 200, 262, 25);
 
+        lblPhoneNo1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblPhoneNo1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPhoneNo1.setText("Email:");
         add(lblPhoneNo1);
         lblPhoneNo1.setBounds(175, 282, 87, 13);
 
+        txtEmail.setBackground(new java.awt.Color(255, 255, 204));
         txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtEmailKeyPressed(evt);

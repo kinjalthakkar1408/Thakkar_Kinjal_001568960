@@ -59,11 +59,24 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
         lblIngrediants = new javax.swing.JLabel();
         lblItemPrice = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 102));
 
+        lblUpdateMenuItem.setBackground(new java.awt.Color(255, 153, 0));
         lblUpdateMenuItem.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblUpdateMenuItem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblUpdateMenuItem.setText("Update Menu Item");
+        lblUpdateMenuItem.setOpaque(true);
 
+        txtItemNo.setBackground(new java.awt.Color(255, 255, 204));
+
+        txtItemName.setBackground(new java.awt.Color(255, 255, 204));
+
+        txtIngrediants.setBackground(new java.awt.Color(255, 255, 204));
+
+        txtItemPrice.setBackground(new java.awt.Color(255, 255, 204));
+
+        btnUpdate.setBackground(new java.awt.Color(255, 153, 0));
+        btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +84,8 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnSave.setBackground(new java.awt.Color(255, 153, 0));
+        btnSave.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +93,8 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setBackground(new java.awt.Color(255, 153, 0));
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,12 +102,16 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblItemNo.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblItemNo.setText("Item No:");
 
+        lblItemName.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblItemName.setText("Item Name:");
 
+        lblIngrediants.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblIngrediants.setText("Ingrediants:");
 
+        lblItemPrice.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblItemPrice.setText("Item Price:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -98,33 +119,30 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(228, 228, 228)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblItemName)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblItemPrice)
-                                        .addComponent(lblItemNo)
-                                        .addComponent(lblIngrediants)))
-                                .addGap(98, 98, 98)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtItemName, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                                    .addComponent(txtItemNo)
-                                    .addComponent(txtIngrediants)
-                                    .addComponent(txtItemPrice)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnUpdate)
-                                .addGap(60, 60, 60)
-                                .addComponent(btnSave)
-                                .addGap(45, 45, 45)
-                                .addComponent(btnBack))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblItemName)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblItemPrice)
+                                .addComponent(lblItemNo)
+                                .addComponent(lblIngrediants)))
+                        .addGap(98, 98, 98)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtItemName, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                            .addComponent(txtItemNo)
+                            .addComponent(txtIngrediants)
+                            .addComponent(txtItemPrice)))
+                    .addComponent(lblUpdateMenuItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(317, 317, 317)
-                        .addComponent(lblUpdateMenuItem)))
-                .addContainerGap(324, Short.MAX_VALUE))
+                        .addGap(21, 21, 21)
+                        .addComponent(btnUpdate)
+                        .addGap(60, 60, 60)
+                        .addComponent(btnSave)
+                        .addGap(45, 45, 45)
+                        .addComponent(btnBack)))
+                .addContainerGap(315, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,7 +153,7 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblItemNo)
                     .addComponent(txtItemNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtItemName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblItemName))
@@ -147,12 +165,12 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtItemPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblItemPrice))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBack)
                     .addComponent(btnSave)
                     .addComponent(btnUpdate))
-                .addGap(108, 108, 108))
+                .addContainerGap(143, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -175,6 +193,7 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
             menuDirectory.updateItem(item.getItemNo(),itemName,ingrediants,price);
             restrictEditOnFields();
             JOptionPane.showMessageDialog(null, "Menu item successfully!");
+            clearAllFields();
         }
     }//GEN-LAST:event_btnSaveActionPerformed
 
@@ -189,6 +208,12 @@ public class RestaurantMenuItemJPanel extends javax.swing.JPanel {
         txtItemNo.setEditable(false);
         txtIngrediants.setEditable(false);
         txtItemPrice.setEditable(false);
+    }
+    public void clearAllFields() {
+        txtItemNo.setText("");
+        txtIngrediants.setText("");
+        txtItemName.setText("");
+        txtItemPrice.setText("");
     }
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:

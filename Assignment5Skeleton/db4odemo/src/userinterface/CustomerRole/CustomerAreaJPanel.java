@@ -84,7 +84,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         btnViewOrders = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 102));
         setPreferredSize(new java.awt.Dimension(1300, 700));
 
         tblRestaurantList.setModel(new javax.swing.table.DefaultTableModel(

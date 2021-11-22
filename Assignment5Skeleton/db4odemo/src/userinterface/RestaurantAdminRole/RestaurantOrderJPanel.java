@@ -110,11 +110,15 @@ public class RestaurantOrderJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 102));
 
+        lblOrderList.setBackground(new java.awt.Color(255, 153, 0));
         lblOrderList.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblOrderList.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblOrderList.setText("Order List");
+        lblOrderList.setOpaque(true);
 
+        tblOrderList.setBackground(new java.awt.Color(255, 255, 204));
         tblOrderList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -143,6 +147,8 @@ public class RestaurantOrderJPanel extends javax.swing.JPanel {
         });
         scrollOrderList.setViewportView(tblOrderList);
 
+        brnConfirmOrder.setBackground(new java.awt.Color(255, 153, 0));
+        brnConfirmOrder.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         brnConfirmOrder.setText("Confirm Order");
         brnConfirmOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,6 +156,8 @@ public class RestaurantOrderJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnAssignDeliveryMan.setBackground(new java.awt.Color(255, 153, 0));
+        btnAssignDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnAssignDeliveryMan.setText("Assign Delivery Man");
         btnAssignDeliveryMan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,6 +165,7 @@ public class RestaurantOrderJPanel extends javax.swing.JPanel {
             }
         });
 
+        tblDeliveryMan.setBackground(new java.awt.Color(255, 255, 204));
         tblDeliveryMan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -178,6 +187,8 @@ public class RestaurantOrderJPanel extends javax.swing.JPanel {
         });
         scrollDeliveryMan.setViewportView(tblDeliveryMan);
 
+        btnBack.setBackground(new java.awt.Color(255, 153, 0));
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,21 +201,17 @@ public class RestaurantOrderJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(brnConfirmOrder)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblOrderList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrollDeliveryMan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1041, Short.MAX_VALUE)
                     .addComponent(scrollOrderList)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(410, 410, 410)
-                                .addComponent(lblOrderList))
+                            .addComponent(brnConfirmOrder)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnAssignDeliveryMan)
-                                .addGap(43, 43, 43)
+                                .addGap(18, 18, 18)
                                 .addComponent(btnBack)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())

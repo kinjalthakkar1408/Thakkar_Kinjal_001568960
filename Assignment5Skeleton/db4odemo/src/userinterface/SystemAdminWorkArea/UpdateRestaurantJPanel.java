@@ -54,11 +54,15 @@ public class UpdateRestaurantJPanel extends javax.swing.JPanel {
         deleteRestaurantBtn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 102));
 
+        lblRestaurantList.setBackground(new java.awt.Color(255, 153, 0));
         lblRestaurantList.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblRestaurantList.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRestaurantList.setText("Restaurant List");
+        lblRestaurantList.setOpaque(true);
 
+        tblRestaurantList.setBackground(new java.awt.Color(255, 255, 204));
         tblRestaurantList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -83,6 +87,8 @@ public class UpdateRestaurantJPanel extends javax.swing.JPanel {
             tblRestaurantList.getColumnModel().getColumn(6).setResizable(false);
         }
 
+        addRestaurantBtn.setBackground(new java.awt.Color(255, 153, 0));
+        addRestaurantBtn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         addRestaurantBtn.setText("Add Restaurant");
         addRestaurantBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +96,8 @@ public class UpdateRestaurantJPanel extends javax.swing.JPanel {
             }
         });
 
+        viewRestaurantDetailsBtn.setBackground(new java.awt.Color(255, 153, 0));
+        viewRestaurantDetailsBtn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         viewRestaurantDetailsBtn.setText("View Details");
         viewRestaurantDetailsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +105,8 @@ public class UpdateRestaurantJPanel extends javax.swing.JPanel {
             }
         });
 
+        deleteRestaurantBtn.setBackground(new java.awt.Color(255, 153, 0));
+        deleteRestaurantBtn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         deleteRestaurantBtn.setText("Delete Restaurant");
         deleteRestaurantBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +114,8 @@ public class UpdateRestaurantJPanel extends javax.swing.JPanel {
             }
         });
 
+        backBtn.setBackground(new java.awt.Color(255, 153, 0));
+        backBtn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,38 +128,34 @@ public class UpdateRestaurantJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 875, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(addRestaurantBtn)
-                                .addGap(18, 18, 18)
-                                .addComponent(viewRestaurantDetailsBtn)
-                                .addGap(18, 18, 18)
-                                .addComponent(deleteRestaurantBtn))
-                            .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(373, 373, 373)
-                        .addComponent(lblRestaurantList)))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 875, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(addRestaurantBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(viewRestaurantDetailsBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(deleteRestaurantBtn))
+                    .addComponent(lblRestaurantList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(36, 36, 36)
                 .addComponent(lblRestaurantList)
-                .addGap(76, 76, 76)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deleteRestaurantBtn)
                     .addComponent(viewRestaurantDetailsBtn)
-                    .addComponent(addRestaurantBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
-                .addComponent(backBtn)
-                .addGap(26, 26, 26))
+                    .addComponent(addRestaurantBtn)
+                    .addComponent(backBtn))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

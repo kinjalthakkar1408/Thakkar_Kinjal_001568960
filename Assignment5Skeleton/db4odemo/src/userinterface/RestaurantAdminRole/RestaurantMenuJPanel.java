@@ -59,11 +59,15 @@ public class RestaurantMenuJPanel extends javax.swing.JPanel {
         btnDeleteItem = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 102));
 
+        lblRestaurantMenu.setBackground(new java.awt.Color(255, 153, 0));
         lblRestaurantMenu.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        lblRestaurantMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRestaurantMenu.setText("Restaurant Menu");
+        lblRestaurantMenu.setOpaque(true);
 
+        tblResMenu.setBackground(new java.awt.Color(255, 255, 204));
         tblResMenu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -85,6 +89,8 @@ public class RestaurantMenuJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblResMenu);
 
+        btnAddItem.setBackground(new java.awt.Color(255, 153, 0));
+        btnAddItem.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnAddItem.setText("Add Item");
         btnAddItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +98,8 @@ public class RestaurantMenuJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnEditItem.setBackground(new java.awt.Color(255, 153, 0));
+        btnEditItem.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnEditItem.setText("Edit Item");
         btnEditItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +107,8 @@ public class RestaurantMenuJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnDeleteItem.setBackground(new java.awt.Color(255, 153, 0));
+        btnDeleteItem.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnDeleteItem.setText("Delete Item");
         btnDeleteItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +116,8 @@ public class RestaurantMenuJPanel extends javax.swing.JPanel {
             }
         });
 
+        backBtn.setBackground(new java.awt.Color(255, 153, 0));
+        backBtn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,22 +130,18 @@ public class RestaurantMenuJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(backBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAddItem)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnEditItem)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnDeleteItem))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(298, 298, 298)
-                        .addComponent(lblRestaurantMenu)))
+                        .addComponent(backBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAddItem)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEditItem)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnDeleteItem))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 746, Short.MAX_VALUE)
+                    .addComponent(lblRestaurantMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -142,14 +150,14 @@ public class RestaurantMenuJPanel extends javax.swing.JPanel {
                 .addGap(19, 19, 19)
                 .addComponent(lblRestaurantMenu)
                 .addGap(28, 28, 28)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backBtn)
                     .addComponent(btnAddItem)
                     .addComponent(btnEditItem)
-                    .addComponent(btnDeleteItem))
-                .addContainerGap(326, Short.MAX_VALUE))
+                    .addComponent(btnDeleteItem)
+                    .addComponent(backBtn))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

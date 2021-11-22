@@ -74,11 +74,15 @@ public class UpdateCustomersJPanel extends javax.swing.JPanel {
         addCustomerBtn = new javax.swing.JButton();
         backBtn = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 102));
 
+        jLabel1.setBackground(new java.awt.Color(255, 153, 0));
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Customer List");
+        jLabel1.setOpaque(true);
 
+        customerJTable.setBackground(new java.awt.Color(255, 255, 204));
         customerJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -100,6 +104,8 @@ public class UpdateCustomersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(customerJTable);
 
+        viewCustomer.setBackground(new java.awt.Color(255, 153, 0));
+        viewCustomer.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         viewCustomer.setText("View Customer");
         viewCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +113,8 @@ public class UpdateCustomersJPanel extends javax.swing.JPanel {
             }
         });
 
+        deleteCustomer.setBackground(new java.awt.Color(255, 153, 0));
+        deleteCustomer.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         deleteCustomer.setText("Delete Customer");
         deleteCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +122,8 @@ public class UpdateCustomersJPanel extends javax.swing.JPanel {
             }
         });
 
+        addCustomerBtn.setBackground(new java.awt.Color(255, 153, 0));
+        addCustomerBtn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         addCustomerBtn.setText("Add Customer");
         addCustomerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +131,8 @@ public class UpdateCustomersJPanel extends javax.swing.JPanel {
             }
         });
 
+        backBtn.setBackground(new java.awt.Color(255, 153, 0));
+        backBtn.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,22 +145,18 @@ public class UpdateCustomersJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(399, 399, 399)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(backBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(addCustomerBtn)
                         .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(backBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(addCustomerBtn)
-                                .addGap(32, 32, 32)
-                                .addComponent(viewCustomer)
-                                .addGap(26, 26, 26)
-                                .addComponent(deleteCustomer))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 934, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(viewCustomer)
+                        .addGap(26, 26, 26)
+                        .addComponent(deleteCustomer))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 934, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -157,14 +165,14 @@ public class UpdateCustomersJPanel extends javax.swing.JPanel {
                 .addGap(60, 60, 60)
                 .addComponent(jLabel1)
                 .addGap(33, 33, 33)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addCustomerBtn)
                     .addComponent(viewCustomer)
                     .addComponent(deleteCustomer)
                     .addComponent(backBtn))
-                .addGap(62, 62, 62))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

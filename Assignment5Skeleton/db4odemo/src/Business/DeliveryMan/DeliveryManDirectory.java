@@ -28,7 +28,7 @@ public class DeliveryManDirectory {
     }
     
     public DeliveryMan add(DeliveryMan deliveryMan){
-        deliveryMan.setDeliveryId(" "+(deliveryManDirectory.size()+1));
+        deliveryMan.setDeliveryId("DeliveryMan"+(deliveryManDirectory.size()+1));
         deliveryManDirectory.add(deliveryMan);
         return deliveryMan;
     }

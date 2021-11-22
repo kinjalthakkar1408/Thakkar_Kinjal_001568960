@@ -61,10 +61,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageCustomers = new javax.swing.JButton();
         btnManageRestaurants = new javax.swing.JButton();
         btnManageDelivery = new javax.swing.JButton();
+        btnRefreshTree = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel2.setBackground(new java.awt.Color(255, 204, 102));
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("JTree");
         javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Restaurant");
@@ -91,9 +92,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jSplitPane.setRightComponent(jPanel2);
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 204, 102));
 
-        btnManageCustomers.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageCustomers.setBackground(new java.awt.Color(255, 153, 0));
+        btnManageCustomers.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnManageCustomers.setText("Customers");
         btnManageCustomers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +103,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnManageRestaurants.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageRestaurants.setBackground(new java.awt.Color(255, 153, 0));
+        btnManageRestaurants.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnManageRestaurants.setText("Restaurants");
         btnManageRestaurants.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,11 +112,20 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnManageDelivery.setBackground(new java.awt.Color(255, 255, 255));
+        btnManageDelivery.setBackground(new java.awt.Color(255, 153, 0));
+        btnManageDelivery.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnManageDelivery.setText("Deliveryman");
         btnManageDelivery.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageDeliveryActionPerformed(evt);
+            }
+        });
+
+        btnRefreshTree.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnRefreshTree.setText("Refresh Tree");
+        btnRefreshTree.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRefreshTreeActionPerformed(evt);
             }
         });
 
@@ -123,6 +135,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnRefreshTree, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnManageRestaurants, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnManageCustomers, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnManageDelivery, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -137,7 +150,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnManageRestaurants)
                 .addGap(66, 66, 66)
                 .addComponent(btnManageDelivery)
-                .addContainerGap(363, Short.MAX_VALUE))
+                .addGap(57, 57, 57)
+                .addComponent(btnRefreshTree)
+                .addContainerGap(303, Short.MAX_VALUE))
         );
 
         jSplitPane.setLeftComponent(jPanel1);
@@ -190,11 +205,17 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageCustomersActionPerformed
 
+    private void btnRefreshTreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshTreeActionPerformed
+        // TODO add your handling code here:
+        populateTree();
+    }//GEN-LAST:event_btnRefreshTreeActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageCustomers;
     private javax.swing.JButton btnManageDelivery;
     private javax.swing.JButton btnManageRestaurants;
+    private javax.swing.JButton btnRefreshTree;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
