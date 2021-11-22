@@ -197,8 +197,6 @@ public class MainJFrame extends javax.swing.JFrame {
 
         cardLayoutJPanel.setLayout(new java.awt.CardLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/eats1.png"))); // NOI18N
-
         javax.swing.GroupLayout cardLayoutMainWindowLayout = new javax.swing.GroupLayout(cardLayoutMainWindow);
         cardLayoutMainWindow.setLayout(cardLayoutMainWindowLayout);
         cardLayoutMainWindowLayout.setHorizontalGroup(

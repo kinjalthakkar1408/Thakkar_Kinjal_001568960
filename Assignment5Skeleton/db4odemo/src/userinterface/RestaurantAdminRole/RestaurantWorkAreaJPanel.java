@@ -91,7 +91,7 @@ public class RestaurantWorkAreaJPanel extends javax.swing.JPanel {
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 120, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/eats.jpg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, -10, 810, 550));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 810, 550));
     }// </editor-fold>//GEN-END:initComponents
 
     private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed

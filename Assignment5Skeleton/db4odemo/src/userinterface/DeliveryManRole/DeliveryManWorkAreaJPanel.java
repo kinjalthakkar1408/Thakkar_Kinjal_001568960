@@ -70,7 +70,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         resultJTextField = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(255, 204, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         workRequestJTable.setBackground(new java.awt.Color(255, 255, 204));
@@ -112,24 +112,24 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 310, -1, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 310, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 153, 0));
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Update Delivery Details");
         jLabel1.setOpaque(true);
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 370, 40));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 790, 40));
 
         jLabel2.setBackground(new java.awt.Color(255, 153, 0));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel2.setText("Mark Delivery Complete:");
         jLabel2.setOpaque(true);
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 310, -1, -1));
 
         resultJTextField.setBackground(new java.awt.Color(255, 255, 204));
         resultJTextField.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        add(resultJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, 150, -1));
+        add(resultJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 310, 150, -1));
 
         jButton1.setBackground(new java.awt.Color(255, 153, 0));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N

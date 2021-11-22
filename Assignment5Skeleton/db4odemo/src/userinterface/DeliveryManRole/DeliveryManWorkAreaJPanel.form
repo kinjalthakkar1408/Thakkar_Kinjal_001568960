@@ -3,7 +3,7 @@
 <Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="cc" green="cc" red="ff" type="rgb"/>
+      <Color blue="66" green="cc" red="ff" type="rgb"/>
     </Property>
   </Properties>
   <AuxValues>
@@ -112,7 +112,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="730" y="310" width="-1" height="-1"/>
+          <AbsoluteConstraints x="720" y="310" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -130,7 +130,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="210" y="50" width="370" height="40"/>
+          <AbsoluteConstraints x="10" y="50" width="790" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -147,7 +147,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="410" y="310" width="-1" height="-1"/>
+          <AbsoluteConstraints x="400" y="310" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -162,7 +162,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="570" y="310" width="150" height="-1"/>
+          <AbsoluteConstraints x="560" y="310" width="150" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

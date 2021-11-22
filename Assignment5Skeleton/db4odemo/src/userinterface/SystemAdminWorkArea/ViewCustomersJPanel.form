@@ -22,77 +22,64 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
-                      <Component id="lblNumberError" min="-2" pref="187" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="295" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblFullName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblMobileNo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtEmail" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="txtMobileNo" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="txtFullName" min="-2" pref="170" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblFullName" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblMobileNo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblEmail" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtEmail" max="32767" attributes="0"/>
-                                  <Component id="txtMobileNo" max="32767" attributes="0"/>
-                                  <Component id="txtFullName" pref="170" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="lblStreetAddress" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="lblStreetAddress" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblZipcode" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtStreetAddress" pref="170" max="32767" attributes="0"/>
-                                      <Component id="txtZipcode" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="btnSaveChanges" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="btnEditCustomer" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="lblUpdateCustomer" min="-2" pref="274" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Component id="lblCustomerNo" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="txtCustomerNo" min="-2" pref="170" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lblZipcode" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lblNameError" min="-2" pref="187" max="-2" attributes="0"/>
-                                  <Component id="lblEmailError" min="-2" pref="187" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                              <Component id="lblZipcodeError" min="-2" pref="187" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="txtStreetAddress" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="txtZipcode" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="btnSaveChanges" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
+                          <Component id="btnEditCustomer" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="lblCustomerNo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="txtCustomerNo" min="-2" pref="170" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="334" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="lblNameError" min="-2" pref="187" max="-2" attributes="0"/>
+                  <Component id="lblEmailError" min="-2" pref="187" max="-2" attributes="0"/>
+                  <Component id="lblNumberError" min="-2" pref="187" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lblZipcodeError" min="-2" pref="187" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="lblUpdateCustomer" min="-2" pref="582" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -101,58 +88,62 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="lblUpdateCustomer" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblCustomerNo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtCustomerNo" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblFullName" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtFullName" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="lblNameError" min="-2" pref="19" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="275" max="-2" attributes="0"/>
+                      <Component id="lblZipcodeError" min="-2" pref="19" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblMobileNo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtMobileNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCustomerNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCustomerNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                      <Component id="lblFullName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtFullName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="lblNameError" min="-2" pref="19" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblMobileNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMobileNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="lblNumberError" min="-2" pref="19" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                              <Component id="lblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lblEmailError" min="-2" pref="19" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblStreetAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtStreetAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblZipcode" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtZipcode" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="lblNumberError" min="-2" pref="19" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="lblEmailError" min="-2" pref="19" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblStreetAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtStreetAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblZipcode" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtZipcode" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="lblZipcodeError" min="-2" pref="19" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Component id="btnSaveChanges" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="btnEditCustomer" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnSaveChanges" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnBack" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="151" max="32767" attributes="0"/>
+              <EmptySpace pref="111" max="32767" attributes="0"/>
+              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

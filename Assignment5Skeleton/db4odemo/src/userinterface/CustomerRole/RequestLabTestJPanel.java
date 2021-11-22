@@ -65,9 +65,13 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 102));
 
+        enterpriseLabel.setBackground(new java.awt.Color(255, 153, 0));
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        enterpriseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         enterpriseLabel.setText("Orders:");
+        enterpriseLabel.setOpaque(true);
 
+        workRequestJTable.setBackground(new java.awt.Color(255, 255, 204));
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -100,8 +104,15 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             workRequestJTable.getColumnModel().getColumn(5).setResizable(false);
         }
 
+        jLabel2.setBackground(new java.awt.Color(255, 153, 0));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel2.setText("Order Comment:");
 
+        orderComment.setBackground(new java.awt.Color(255, 153, 0));
+        orderComment.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+
+        btnOrderCmnt.setBackground(new java.awt.Color(255, 153, 0));
+        btnOrderCmnt.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnOrderCmnt.setText("Comment");
         btnOrderCmnt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +120,8 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnBack.setBackground(new java.awt.Color(255, 204, 102));
+        btnBack.setBackground(new java.awt.Color(255, 153, 0));
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,19 +136,14 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(155, 155, 155)
-                                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 870, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(308, 308, 308)))))
-                .addContainerGap())
+                        .addGap(155, 155, 155)
+                        .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 880, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel2)
@@ -145,17 +152,20 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
                 .addGap(39, 39, 39)
                 .addComponent(btnOrderCmnt)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(enterpriseLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -163,7 +173,7 @@ public class RequestLabTestJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(orderComment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnOrderCmnt))
-                .addContainerGap(457, Short.MAX_VALUE))
+                .addContainerGap(450, Short.MAX_VALUE))
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 740));

@@ -79,7 +79,7 @@ public class ResturantInfoJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 204, 102));
 
-        lblResInfo.setBackground(new java.awt.Color(255, 102, 0));
+        lblResInfo.setBackground(new java.awt.Color(255, 153, 0));
         lblResInfo.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         lblResInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblResInfo.setText("Restaurant Info");

@@ -87,6 +87,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 204, 102));
         setPreferredSize(new java.awt.Dimension(1300, 700));
 
+        tblRestaurantList.setBackground(new java.awt.Color(255, 255, 204));
         tblRestaurantList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -115,6 +116,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRestaurantList);
 
+        btnPlaceOrder.setBackground(new java.awt.Color(255, 153, 0));
+        btnPlaceOrder.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnPlaceOrder.setText("Place Order");
         btnPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,14 +125,23 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        boxQuantityCount.setBackground(new java.awt.Color(255, 153, 0));
+        boxQuantityCount.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         boxQuantityCount.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50" }));
         boxQuantityCount.setToolTipText("");
 
+        lblQuantity.setBackground(new java.awt.Color(255, 153, 0));
+        lblQuantity.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         lblQuantity.setText("Quantity:");
 
+        lblRestaurantsAvailable.setBackground(new java.awt.Color(255, 153, 0));
         lblRestaurantsAvailable.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblRestaurantsAvailable.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRestaurantsAvailable.setText("Restaurants Available");
+        lblRestaurantsAvailable.setOpaque(true);
 
+        btnViewOrders.setBackground(new java.awt.Color(255, 153, 0));
+        btnViewOrders.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnViewOrders.setText("View Orders");
         btnViewOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +149,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnBack.setBackground(new java.awt.Color(255, 153, 0));
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,27 +163,23 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(102, 102, 102)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(311, 311, 311)
-                        .addComponent(lblRestaurantsAvailable)
-                        .addGap(28, 28, 28)
-                        .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(102, 102, 102)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnBack)
-                                .addGap(63, 63, 63)
-                                .addComponent(btnPlaceOrder)
-                                .addGap(57, 57, 57)
-                                .addComponent(lblQuantity)
-                                .addGap(26, 26, 26)
-                                .addComponent(boxQuantityCount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnViewOrders))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(155, Short.MAX_VALUE))
+                        .addComponent(btnBack)
+                        .addGap(63, 63, 63)
+                        .addComponent(btnPlaceOrder)
+                        .addGap(57, 57, 57)
+                        .addComponent(lblQuantity)
+                        .addGap(26, 26, 26)
+                        .addComponent(boxQuantityCount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnViewOrders))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 652, Short.MAX_VALUE)
+                    .addComponent(lblRestaurantsAvailable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(382, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,7 +201,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                     .addComponent(lblQuantity)
                     .addComponent(boxQuantityCount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnViewOrders))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(334, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
